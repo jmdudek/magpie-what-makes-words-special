@@ -18,6 +18,6 @@ This experiment was built using [\_magpie](https://magpie-ea.github.io/magpie-si
 
 ## Running the experiment
 
-1. Online Link: [here](https://mr-xplab-2020-magpie-mental-rotation.netlify.app)
+1. Online Link: [here](what-makes-words-special-group35.netlify.app)
 
 2. Offline: Clone the repository, run `npm install` and open `index.html`.
