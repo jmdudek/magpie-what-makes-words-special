@@ -22,8 +22,9 @@
 const intro = magpieViews.view_generator("intro", {
   trials: 1,
   name: 'intro',
+  title: "Hello there!",
   // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-  text: `Hello there!
+  text: `Thank you for taking part in our experiment!
             <br />
             <br />
             You will need around <b>10 min</b> to complete the experiment. Please <b>make sure that you will not be distracted</b>.
@@ -49,6 +50,8 @@ const instructions = magpieViews.view_generator("instructions", {
             Shortly after the auditory cue an image will appear in the center of the screen.
             Your task will be to determine for each picture whether or not the sound you heard belongs to the same basic level category as depicted in the the image.
             <br />
+            Same basic level category means e.g. you hear a dog barking or a person saying the word "dog" and after that an image of a dog appears, so the sounds match with the image.
+            <br />
             <br />
             You should <b>indicate your decision</b> by either <b>pressing the "q" or "p" button</b> on your keyboard.
             <br />
@@ -65,7 +68,10 @@ const instructions = magpieViews.view_generator("instructions", {
             <br />
             First you will go through 6 practice trials to familiarise yourself with the task.
             <br />
-            After that a second instructions screen will show up to notify you that the main 144 trials are about to begin.`,
+            After that a second instructions screen will show up to notify you that the main trials are about to begin.
+            <br />
+            <br />
+            Please be as <b>fast</b> and <b>accurate</b> as you can.`,
   buttonText: 'go to trials'
 });
 
@@ -74,6 +80,15 @@ const instructions_main = magpieViews.view_generator("instructions", {
     name: 'instructions_main',
     title: 'Main Trials are about to start!',
     text:  `Now that you are familiar with the task, the main trials can begin.
+            <br />
+            <br />
+            Once again the key assignment:
+            <br />
+            <br />
+            <b>"q"</b> indicates a <b>yes</b> response
+            <br />
+            <br />
+            <b>"p"</b> indicates a <b>no</b> response
             <br />
             <br />
             Please <b>concentrate</b> on the task and be as <b>fast</b> and <b>accurate</b> in your decisions as possible.`,

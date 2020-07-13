@@ -34,7 +34,6 @@ const create_trials = function(index_beginning, index_end) {
       index_match = get_matching_image_index(match[i][1]);
       index_mismatch = get_mismatching_image_index(match[i][1]);
       var trial = {
-        question: "Does this picture belong to the same basic level category as the sound you just heard?",
         audio: 'stimuli/sounds/' + sounds[i],
         picture: 'stimuli/images/' + images[index_match],
         key1: 'q',
@@ -52,7 +51,6 @@ const create_trials = function(index_beginning, index_end) {
       };
       trials.push(trial);
       var trial = {
-        question: "Does this picture belong to the same basic level category as the sound you just heard?",
         audio: 'stimuli/sounds/' + sounds[i],
         picture: 'stimuli/images/' + images[index_mismatch],
         key1: 'q',
@@ -79,7 +77,6 @@ const create_test_trials = function(arr_of_indices_match, arr_of_indices_mismatc
   arr_of_indices_match.forEach(i => {
     index_match = get_matching_image_index(match[i][1]);
     var trial = {
-      question: "Does this picture belong to the same basic level category as the sound you just heard?",
       audio: 'stimuli/sounds/' + sounds[i],
       picture: 'stimuli/images/' + images[index_match],
       key1: 'q',
@@ -100,7 +97,6 @@ const create_test_trials = function(arr_of_indices_match, arr_of_indices_mismatc
   arr_of_indices_mismatch.forEach(i => {
     index_mismatch = get_mismatching_image_index(match[i][1]);
     var trial = {
-      question: "Does this picture belong to the same basic level category as the sound you just heard?",
       audio: 'stimuli/sounds/' + sounds[i],
       picture: 'stimuli/images/' + images[index_mismatch],
       key1: 'q',
