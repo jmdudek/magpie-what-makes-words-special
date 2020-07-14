@@ -195,7 +195,8 @@ const training = magpieViews.view_generator(
   data: _.shuffle(trial_info.training_images),
   fix_duration: 250,
   hook: {
-    after_fix_point: add_delay
+    after_fix_point: add_delay,
+    after_response_enabled: check_response
     }
   },
   {

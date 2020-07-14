@@ -129,16 +129,53 @@ const time_limit = function(data, next) {
 };
 
 // compares the chosen answer to the value of `option1`
+var audio = new Audio("stimuli/sounds/bird_sound_robin.mp3");
+
 check_response = function(data, next) {
-    $('input[name=answer]').on('change', function(e) {
-        if (data.correctness === 'correct') {
+    $(document).keypress(function(e) {
+      /*
+      const keyPressed = String.fromCharCode(e.which).toLowerCase();
+      if (keyPressed === "q") {
+        keyPressed = "yes";
+      } else {
+        keyPressed = "no";
+      }
+      alert(keyPressed);
+      keyPressed = None;
+      */
+      var correct = "Yay, you answered correctly!";
+      var incor = "Incorrect answer :( Better luck next time!";
+      if (e.keyCode == 113) {
+        console.log(e.keyCode);
+        console.log(data.expected);
+        if (data.expected == "yes") {
+          alert(correct);
+        } else {
+          alert(incor);
+        }
+      }
+      if (e.keyCode == 112) {
+        console.log(e.keyCode);
+        console.log(data.expected);
+        if (data.expected == "no") {
+          alert(correct);
+        } else {
+          alert(incor);
+        }
+      }
+        correct = None;
+        incor = None;
+        /*
+        if (data.expected == key) {
             alert('Your answer is correct! Yey!');
         } else {
-            alert('Sorry, this answer is incorrect :( The correct answer was ' + data.correct);
-        }
+            alert('Sorry, this answer is incorrect :( The correct answer was ' + data.expected);
+        }*/
         next();
-    })
-}
+    });
+    //audio.play();
+
+};
 
 // Declare your hooks here
 
